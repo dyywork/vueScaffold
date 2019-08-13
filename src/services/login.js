@@ -15,7 +15,7 @@ export function fetchList () {
 
 export function createArticle () {
   return request({
-    url: '/novelApi',
+    url: '/api/novelApi',
     method: 'get'
   })
 }

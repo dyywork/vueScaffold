@@ -1,10 +1,18 @@
 const path = require('path');
 
-function resolve(dir) {
-  return path.join(__dirname,dir);
-}
-
 module.exports = {
+  /* css: {
+    loaderOptions: {
+      less: {
+        modifyVars: {
+          red: '#03a9f4',
+          blue: '#3eaf7c',
+          orange: '#f08d49',
+          'text-color': '#111'
+        }
+      }
+    }
+  }, */
   configureWebpack: {
     performance: {
       hints: false,
@@ -12,7 +20,8 @@ module.exports = {
   },
   chainWebpack: (config)=>{
     config.resolve.alias.set('@', path.join(__dirname,'src'))
-  }
+  },
+
   /* devServer: {
     proxy: {
       '/api': {

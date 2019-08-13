@@ -19,7 +19,7 @@
         required
       />
     </van-cell-group>
-    <van-button type="primary" class="button" size="large" @click="login">登录</van-button>
+    <van-button type="info" class="button" size="large" @click="login">登录</van-button>
   </div>
 </template>
 
