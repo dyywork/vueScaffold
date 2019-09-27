@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <van-nav-bar title="首页"></van-nav-bar>
-    <span>11111111</span>
+    <van-button type="primary" @click="goList">List</van-button>
   </div>
 </template>
 
@@ -21,6 +21,9 @@ export default {
       createArticle().then(res => {
         console.log(res)
       })
+    },
+    goList () {
+      this.$router.push({ name: 'list' })
     }
   }
 }

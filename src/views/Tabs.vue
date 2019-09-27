@@ -1,7 +1,7 @@
 <template>
   <div>
     <router-view />
-    <van-tabbar route>
+    <van-tabbar route v-show="showTabs">
       <van-tabbar-item
         replace
         to="/home"
@@ -19,3 +19,25 @@
     </van-tabbar>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'tabs',
+  data () {
+    return {
+
+    }
+  },
+  computed: {
+    showTabs () {
+      return this.$store.state.tabsHide
+    }
+  },
+  created () {
+    console.log(this.$store.state.tabsHide)
+  },
+  methods: {
+
+  }
+}
+</script>

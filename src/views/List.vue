@@ -1,0 +1,31 @@
+<template>
+  <div class="list">
+    <van-nav-bar
+      title="List"
+      left-text="返回"
+      left-arrow
+      @click-left="onClickLeft"
+    />
+    <h1>This is an list page</h1>
+    <router-link to='/home'>home</router-link>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'list',
+  data () {
+    return {
+
+    }
+  },
+  created () {
+  },
+  methods: {
+    onClickLeft () {
+      console.log(this.$router)
+      this.$router.back()
+    }
+  }
+}
+</script>
