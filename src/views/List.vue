@@ -23,7 +23,6 @@ export default {
   },
   methods: {
     onClickLeft () {
-      console.log(this.$router)
       this.$router.back()
     }
   }
