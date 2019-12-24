@@ -25,8 +25,8 @@ export default {
     },
     goList () {
       this.$router.push({ name: 'list' })
-    }
-  }
+    },
+  },
 }
 </script>
 
