@@ -25,7 +25,15 @@ const router = new Router({
         {
           path: '/home',
           name: 'home',
-          component: Home
+          component: Home,
+          redirect: '/home/list',
+          children: [
+            {
+              path: '/home/list',
+              name: 'list',
+              component: () => import('@/views/List.vue')
+            }
+          ]
         },
         {
           path: '/about',
