@@ -1,8 +1,9 @@
 <template>
-  <div class="home">
+<router-view />
+  <!-- <div class="home">
     <van-nav-bar title="首页"></van-nav-bar>
     <van-button type="primary" @click="goList">List</van-button>
-  </div>
+  </div> -->
 </template>
 
 <script>
@@ -24,8 +25,8 @@ export default {
     },
     goList () {
       this.$router.push({ name: 'list' })
-    }
-  }
+    },
+  },
 }
 </script>
 
