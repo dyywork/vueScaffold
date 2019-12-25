@@ -9,12 +9,12 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      redirect: '/login'
+      redirect: '/login',
     },
     {
       path: '/login',
       name: 'login',
-      component: () => import('@/views/Login.vue')
+      component: () => import('@/views/Login.vue'),
     },
     {
       path: '/tabs',
@@ -26,14 +26,9 @@ const router = new Router({
           path: '/home',
           name: 'home',
           component: Home,
-          redirect: '/home/list',
-          children: [
-            {
-              path: '/home/list',
-              name: 'list',
-              component: () => import('@/views/List.vue')
-            }
-          ]
+          meta: {
+            cacheTo: ['list'],
+          },
         },
         {
           path: '/about',
@@ -41,16 +36,16 @@ const router = new Router({
           // route level code-splitting
           // this generates a separate chunk (about.[hash].js) for this route
           // which is lazy-loaded when the route is visited.
-          component: () => import(/* webpackChunkName: "about" */ '@/views/About.vue')
+          component: () => import(/* webpackChunkName: "about" */ '@/views/About.vue'),
         },
         {
           path: '/list',
           name: 'list',
-          component: () => import('@/views/List.vue')
-        }
-      ]
-    }
-  ]
+          component: () => import('@/views/List.vue'),
+        },
+      ],
+    },
+  ],
 })
 
 export default router

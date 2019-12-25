@@ -1,9 +1,11 @@
 <template>
-<router-view />
-  <!-- <div class="home">
-    <van-nav-bar title="首页"></van-nav-bar>
+  <div class="home">
+    <van-nav-bar title="首页" fixed></van-nav-bar>
     <van-button type="primary" @click="goList">List</van-button>
-  </div> -->
+    <van-cell-group>
+      <van-cell v-for="i in list" :key='i' :title="i" is-link @click="goList" :value="i"></van-cell>
+    </van-cell-group>
+  </div>
 </template>
 
 <script>
@@ -11,8 +13,18 @@
 import { fetchList, createArticle } from '@/services/login'
 export default {
   name: 'home',
+  data () {
+    return {
+      list: [],
+    }
+  },
   created () {
-    this.getList()
+    // this.getList()
+    setTimeout(() => {
+      for (var i = 0; i < 100; i++) {
+        this.list.push(i)
+      }
+    })
   },
   methods: {
     getList () {
