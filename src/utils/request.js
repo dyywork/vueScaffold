@@ -4,7 +4,7 @@ import axios from 'axios'
 console.log(process.env)
 const service = axios.create({
   baseURL: process.env.VUE_APP_URL,
-  timeout: 5000
+  timeout: 5000,
 })
 
 // request interceptor
