@@ -19,7 +19,7 @@
         required
       />
     </van-cell-group>
-    <van-button type="info" class="button" size="large" @click="login">登录</van-button>
+    <van-button type="info" class="button" size="large" @click="login">登录test2</van-button>
   </div>
 </template>
 
@@ -30,7 +30,7 @@ export default {
   data () {
     return {
       username: '',
-      password: ''
+      password: '',
     }
   },
   methods: {
@@ -39,13 +39,13 @@ export default {
         this.$router.push('/tabs')
       } else {
         Dialog.alert({
-          message: '请输入用户名密码！'
+          message: '请输入用户名密码！',
         }).then(() => {
           // on close
         })
       }
-    }
-  }
+    },
+  },
 }
 </script>
 
