@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <van-nav-bar title="首页" fixed></van-nav-bar>
-    <van-button type="primary" @click="goList">List</van-button>
+    <van-button type="primary" @click="goList">test1</van-button>
     <van-cell-group>
       <van-cell v-for="i in list" :key='i' :title="i" is-link @click="goList" :value="i"></van-cell>
     </van-cell-group>
