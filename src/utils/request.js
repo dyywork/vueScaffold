@@ -1,11 +1,11 @@
 import axios from 'axios'
 
 // create an axios instance
-console.log(process.env)
+console.log(process.env);
 const service = axios.create({
   baseURL: process.env.VUE_APP_URL,
-  timeout: 5000
-})
+  timeout: 5000,
+});
 
 // request interceptor
 service.interceptors.request.use(
@@ -18,7 +18,7 @@ service.interceptors.request.use(
   error => {
     Promise.reject(error)
   }
-)
+);
 
 // response interceptor
 service.interceptors.response.use(
@@ -27,6 +27,6 @@ service.interceptors.response.use(
     // const { data } = error.response
     return Promise.reject(error)
   }
-)
+);
 
 export default service

@@ -4,7 +4,7 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 const state = {
-  tabsHide: true
+  tabsHide: true,
 }
 
 const mutations = {
@@ -13,12 +13,12 @@ const mutations = {
   },
   incrementOn (state) {
     state.tabsHide = false
-  }
+  },
 }
 
 const store = new Vuex.Store({
   state,
-  mutations
+  mutations,
 })
 
 export default store
